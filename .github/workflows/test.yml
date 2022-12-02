@@ -1,0 +1,11 @@
+name: Test
+on:
+  issues:
+    types: [ closed ]
+jobs:
+  issue_commented:
+    name: Issue
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo ${{ github.event.issue.number }}
